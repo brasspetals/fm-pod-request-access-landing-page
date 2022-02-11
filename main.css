@@ -1,0 +1,163 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #121725;
+  color: #C2CBE5;
+  font-family: 'Chivo', sans-serif;
+  font-weight: 300;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  gap: 53px;
+  text-align: center;
+  padding: 62px 24px;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.background-image {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  opacity: 0.09;
+}
+
+main {
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+  max-width: 325px;
+}
+
+h1 {
+  color: #fff;
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1.46;
+  text-transform: uppercase;
+}
+
+span {
+  color:#54E6AF;
+}
+
+p {
+  max-width: 35ch;
+  font-size: 15px;
+  line-height: 1.667;
+}
+
+.featured-in {
+  padding: 17px 0;
+  display: flex;
+  gap: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.featured-in img:nth-of-type(1) {
+  width: 56px;
+}
+.featured-in img:nth-of-type(2) {
+  width: 45px;
+}
+.featured-in img:nth-of-type(3) {
+  width: 73px;
+}
+.featured-in img:nth-of-type(4) {
+  width: 77px;
+}
+
+form {
+  display: grid;
+  width: 100%;
+  gap: 1rem;
+  font-weight: 400;
+  padding-top: 15px;
+}
+
+input {
+  padding: 0 32px;
+  height: 46px;
+  border: none;
+  border-radius: 2rem;
+  background-color: #2C344B;
+  color: #fff;
+  font-size: 14px;
+  line-height: 2;
+  font-weight: 400;
+  outline: 1px solid transparent;
+  transition: all 0.5s;
+}
+
+input::placeholder {
+  color: #C2CBE5;
+}
+
+input:focus-visible {
+  outline: 1px solid rgba(84, 230, 175, 0.8);
+}
+
+button {
+  border: 1px transparent;
+  border-radius: 2rem;
+  cursor: pointer;
+  padding: 0rem .75rem;
+  height: 46px;
+  background-color:#54E6AF;
+  color: #121725;
+  text-transform: capitalize;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2;
+  transition: background-color 0.5s;
+}
+
+button:hover, button:focus {
+  background-color: #B3FFE2;
+  outline: 0;
+}
+
