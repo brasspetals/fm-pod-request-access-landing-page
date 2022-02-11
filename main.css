@@ -39,8 +39,11 @@ body {
 }
 
 .container {
+  position: relative;
+  min-height: 100vh;
   display: grid;
   justify-content: center;
+  align-content: start;
   gap: 53px;
   text-align: center;
   padding: 62px 24px;
