@@ -169,7 +169,7 @@ button:hover, button:focus {
   main {
     max-width: 100%;
     justify-items: left;
-    padding: 93px 39px 93px 0;
+    padding: 93px 0;
     gap: 30px;
   }
 
@@ -193,19 +193,19 @@ button:hover, button:focus {
   }
 
   .platforms img:nth-of-type(1) {
-    width: 100%;
+    width: 25%;
     max-width: 96px;
   }
   .platforms img:nth-of-type(2) {
-    width: 100%;
+    width: 25%;
     max-width: 78px;
   }
   .platforms img:nth-of-type(3) {
-    width: 100%;
+    width: 25%;
     max-width: 125px;
   }
   .platforms img:nth-of-type(4) {
-    width: 100%;
+    width: 25%;
     max-width: 129px;
   }
 
@@ -250,5 +250,6 @@ button:hover, button:focus {
   main {
     background-color:#121725;
     max-width: 635px;
+    padding: 93px 39px 93px 0;
   }
 }
