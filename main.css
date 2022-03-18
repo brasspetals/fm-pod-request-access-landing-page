@@ -229,6 +229,9 @@ button:hover, button:focus {
 }
 
 @media screen and (min-width: 600px) {
+  .container {
+    min-height: unset;
+  }
   .container::before {
     background-image: url('./assets/tablet/image-host.jpg');
     background-size: unset;
@@ -251,5 +254,53 @@ button:hover, button:focus {
     background-color:#121725;
     max-width: 635px;
     padding: 93px 39px 93px 0;
+  }
+}
+
+@media screen and (min-width: 1050px) {
+  .container {
+    padding: 102px 165px;
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .container::before {
+    background-image: url('./assets/desktop/image-host.jpg');
+    background-position-y: 130px;
+    background-position-x: clamp(425px, 100%, 625px);
+  }
+
+  .container::after {
+    content: url('./assets/desktop/bg-pattern-dots.svg');
+    bottom: 86px;
+    left: unset;
+    right: 0; 
+  }
+
+  header {
+    margin-bottom: 46px;
+  }
+
+  main {
+    max-width: 723px;
+    padding: 88px 39px 0 0;
+    gap: 24px;
+  }
+
+  h1 {
+    font-size: 52px;
+    line-height: 1.19;
+  }
+
+  form {
+    padding-top: 16px;
+  }
+
+  button {
+    top: 21px;
+  }
+
+  .platforms {
+    padding: 40px 0;
   }
 }
