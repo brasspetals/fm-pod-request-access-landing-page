@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="main.css">
 
   <title>Frontend Mentor | Pod request access landing page</title>
+  <script defer src="script.js"></script>
 </head>
 
 <body>
@@ -43,9 +44,10 @@
         <img src="./assets/desktop/pocket-casts.svg" alt="">
       </div>
 
-      <form>
+      <form action="#" id="form">
         <input type="email" placeholder="Email address" id="email" name="email" required>
-        <button type="submit">Request access</button>
+        <button id="btn" type="submit">Request access</button>
+        <p id="error">Oops! Please check your email.</p>
       </form>
     </main>
   </div>

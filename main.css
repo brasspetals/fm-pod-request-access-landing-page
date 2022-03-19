@@ -13,19 +13,34 @@ select {
   font: inherit;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+@keyframes fadeUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
   }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.fadeDown {
+  animation: fadeDown .4s ease backwards;
+}
+
+.fadeUp {
+  animation: fadeUp .3s ease;
 }
 
 body {
@@ -111,6 +126,7 @@ p {
 
 form {
   display: grid;
+  position: relative;
   width: 100%;
   gap: 1rem;
   font-weight: 400;
@@ -157,6 +173,16 @@ button {
 button:hover, button:focus {
   background-color: #B3FFE2;
   outline: 0;
+}
+
+#error {
+  display: none;
+  position: absolute;
+  color: #FB3E3E;
+  font-weight: bold;
+  font-size: 12px;
+  top: -10px;
+  left: 32px;
 }
 
 @media screen and (min-width: 500px) {
@@ -211,7 +237,6 @@ button:hover, button:focus {
 
   form {
     grid-auto-flow: column;
-    position: relative;
     max-width: 427px;
     padding-top: 11px;
   }
@@ -225,6 +250,10 @@ button:hover, button:focus {
     right: 5px;
     top: 16px;
     width: 162px;
+  }
+
+  #error {
+    top: 78px;
   }
 }
 
