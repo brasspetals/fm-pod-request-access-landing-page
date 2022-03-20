@@ -8,6 +8,7 @@ function validateEmail(e) {
   if(email.value.match(emailRegex)){
     e.preventDefault();
     form.reset();
+    email.setAttribute('aria-invalid', 'false');
     //fade out error message if displayed
     error.classList.remove('fadeDown');
     error.classList.add('fadeOut');
@@ -17,6 +18,7 @@ function validateEmail(e) {
   } else {
     e.preventDefault();
     email.focus();
+    email.setAttribute('aria-invalid', 'true');
     //fade in error message
     error.style.display = 'block';
     error.classList.add('fadeDown');

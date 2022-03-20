@@ -45,7 +45,7 @@ select {
     transform: translateX(15px);
   }
   100% {
-    opacity: 0.9;
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -237,6 +237,7 @@ input {
 
 input::placeholder {
   color: #C2CBE5;
+  font-weight: bold;
 }
 
 input:focus-visible {
@@ -367,7 +368,7 @@ button:hover, button:focus {
     background-image: url('./assets/tablet/image-host.jpg');
     background-size: unset;
     background-position: top right;
-    opacity: .9;
+    opacity: 1;
     animation: fadeBg 1s ease;
   }
   
