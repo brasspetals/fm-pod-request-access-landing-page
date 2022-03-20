@@ -10,7 +10,7 @@ function validateEmail(e) {
     form.reset();
     //fade out error message if displayed
     error.classList.remove('fadeDown');
-    error.classList.add('fadeUp');
+    error.classList.add('fadeOut');
     setTimeout(function() {
       error.style.display = 'none';
     }, 300);
@@ -20,7 +20,7 @@ function validateEmail(e) {
     //fade in error message
     error.style.display = 'block';
     error.classList.add('fadeDown');
-    error.classList.remove('fadeUp');
+    error.classList.remove('fadeOut');
   }
 }
 

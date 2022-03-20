@@ -1,3 +1,4 @@
+/* RESET */
 *,
 *::before,
 *::after {
@@ -13,6 +14,84 @@ select {
   font: inherit;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes fadeBgMobile {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.09;
+  }
+}
+
+@keyframes fadeBg {
+  0% {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+  100% {
+    opacity: 0.9;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes fadeDown {
   0% {
     opacity: 0;
@@ -24,7 +103,7 @@ select {
   }
 }
 
-@keyframes fadeUp {
+@keyframes fadeOut {
   0% {
     opacity: 1;
     transform: translateY(0px);
@@ -35,14 +114,17 @@ select {
   }
 }
 
-.fadeDown {
-  animation: fadeDown .4s ease backwards;
+@media (prefers-reduced-motion: no-preference) {
+  .fadeOut {
+    animation: fadeOut .3s ease;
+  }
+
+  .fadeDown {
+    animation: fadeDown .4s ease backwards;
+  }
 }
 
-.fadeUp {
-  animation: fadeUp .3s ease;
-}
-
+/* MAIN */
 body {
   background-color: #121725;
   color: #C2CBE5;
@@ -74,6 +156,11 @@ body {
   z-index: -1;
   overflow: hidden;
   opacity: 0.09;
+  animation: fadeBgMobile .7s ease;
+}
+
+header {
+  animation: fadeUp 1s .3s ease backwards;
 }
 
 main {
@@ -81,6 +168,7 @@ main {
   justify-items: center;
   gap: 16px;
   max-width: 325px;
+  animation: fadeUp 1s .3s ease backwards;
 }
 
 h1 {
@@ -185,6 +273,19 @@ button:hover, button:focus {
   left: 32px;
 }
 
+.attribution {
+  display:none;
+}
+
+.attribution p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.attribution a {
+  color:#54E6AF;
+}
+
 @media screen and (min-width: 500px) {
   .container {
     padding: 50px 39px;
@@ -261,11 +362,13 @@ button:hover, button:focus {
   .container {
     min-height: unset;
   }
+
   .container::before {
     background-image: url('./assets/tablet/image-host.jpg');
     background-size: unset;
     background-position: top right;
     opacity: .9;
+    animation: fadeBg 1s ease;
   }
   
   .container::after {
@@ -273,16 +376,19 @@ button:hover, button:focus {
     position: absolute;
     bottom: -4px;
     left: 30px;
+    animation: fadeLeft 1s ease backwards;
   }
 
   header {
     margin-bottom: 95px;
+    animation: fadeIn 1s ease backwards;
   }
 
   main {
     background-color:#121725;
     max-width: 635px;
     padding: 93px 39px 93px 0;
+    animation: fadeUp .9s .1s ease backwards;
   }
 }
 
@@ -304,6 +410,7 @@ button:hover, button:focus {
     bottom: 86px;
     left: unset;
     right: 0; 
+    animation: fadeRight 1s .1s ease backwards;
   }
 
   header {
