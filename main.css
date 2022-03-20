@@ -264,26 +264,21 @@ button:hover, button:focus {
   outline: 0;
 }
 
-#error {
+#error, 
+#success {
   display: none;
   position: absolute;
-  color: #FB3E3E;
   font-weight: bold;
   font-size: 12px;
   top: -10px;
   left: 32px;
 }
 
-.attribution {
-  display:none;
+#error {
+  color: #FB3E3E;
 }
 
-.attribution p {
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.attribution a {
+#success {
   color:#54E6AF;
 }
 
@@ -319,7 +314,7 @@ button:hover, button:focus {
     max-width: 536px;
     padding: 35px 0;
   }
-
+  
   .platforms img:nth-of-type(1) {
     width: 25%;
     max-width: 96px;
@@ -354,7 +349,7 @@ button:hover, button:focus {
     width: 162px;
   }
 
-  #error {
+  #error, #success {
     top: 78px;
   }
 }
