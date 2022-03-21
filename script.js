@@ -31,6 +31,13 @@ function validateEmail(e) {
     email.focus();
     email.setAttribute('aria-invalid', 'true');
 
+    // determine error message
+    if (email.value == "") {
+      error.innerHTML = 'Oops! Please add your email.';
+    } else {
+      error.innerHTML = 'Oops! Please check your email.';
+    }
+
     //fade in error message
     error.classList.add('fadeDown');
     error.classList.remove('fadeOut');
