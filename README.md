@@ -13,8 +13,6 @@ This is a solution to the [Pod request access landing page challenge on Frontend
   - [Built With](#built-with)
   - [What I Learned](#what-i-learned)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
 
 ## Overview
 
