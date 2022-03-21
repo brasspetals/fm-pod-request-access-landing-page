@@ -42,7 +42,7 @@ select {
 @keyframes fadeBg {
   0% {
     opacity: 0;
-    transform: translateX(15px);
+    transform: translateX(0.9375rem);
   }
   100% {
     opacity: 1;
@@ -62,7 +62,7 @@ select {
 @keyframes fadeUp {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(0.625rem);
   }
   100% {
     opacity: 1;
@@ -73,7 +73,7 @@ select {
 @keyframes fadeLeft {
   0% {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(-1.25rem);
   }
   100% {
     opacity: 1;
@@ -84,7 +84,7 @@ select {
 @keyframes fadeRight {
   0% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(1.875rem);
   }
   100% {
     opacity: 1;
@@ -95,7 +95,7 @@ select {
 @keyframes fadeDown {
   0% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(0.625rem);
   }
   100% {
     opacity: 1;
@@ -106,11 +106,11 @@ select {
 @keyframes fadeOut {
   0% {
     opacity: 1;
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translateY(-10px);
+    transform: translateY(-0.625rem);
   }
 }
 
@@ -138,9 +138,9 @@ body {
   display: grid;
   justify-content: center;
   align-content: start;
-  gap: 53px;
+  gap: 3.3125rem;
   text-align: center;
-  padding: 62px 24px;
+  padding: 3.875rem 1.5rem;
 }
 
 .container::before {
@@ -166,14 +166,14 @@ header {
 main {
   display: grid;
   justify-items: center;
-  gap: 16px;
-  max-width: 325px;
+  gap: 1rem;
+  max-width: 20.3125rem;
   animation: fadeUp 1s .3s ease backwards;
 }
 
 h1 {
   color: #fff;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-weight: 300;
   line-height: 1.46;
   text-transform: uppercase;
@@ -185,14 +185,14 @@ span {
 
 p {
   max-width: 35ch;
-  font-size: 15px;
+  font-size: 0.9375rem;
   line-height: 1.667;
 }
 
 .platforms {
-  padding: 17px 0;
+  padding: 1.0625rem 0;
   display: flex;
-  gap: 12px 20px;
+  gap: 0.75rem 1.25rem;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
@@ -200,16 +200,16 @@ p {
 }
 
 .platforms img:nth-of-type(1) {
-  width: 56px;
+  width: 3.5rem;
 }
 .platforms img:nth-of-type(2) {
-  width: 45px;
+  width: 2.8125rem;
 }
 .platforms img:nth-of-type(3) {
-  width: 73px;
+  width: 4.5625rem;
 }
 .platforms img:nth-of-type(4) {
-  width: 77px;
+  width: 4.8125rem;
 }
 
 form {
@@ -218,20 +218,20 @@ form {
   width: 100%;
   gap: 1rem;
   font-weight: 400;
-  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
 
 input {
-  padding: 0 32px;
-  height: 46px;
+  padding: 0 2rem;
+  height: 2.875rem;
   border: none;
   border-radius: 2rem;
   background-color: #2C344B;
   color: #fff;
-  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 2;
   font-weight: 400;
-  outline: 1px solid transparent;
+  outline: 0.0625rem solid transparent;
   transition: all 0.4s;
 }
 
@@ -241,19 +241,19 @@ input::placeholder {
 }
 
 input:focus-visible {
-  outline: 1px solid rgba(84, 230, 175, 0.8);
+  outline: 0.0625rem solid rgba(84, 230, 175, 0.8);
 }
 
 button {
-  border: 1px transparent;
+  border: 0.0625rem transparent;
   border-radius: 2rem;
   cursor: pointer;
   padding: 0rem .75rem;
-  height: 46px;
+  height: 2.875rem;
   background-color:#54E6AF;
   color: #121725;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: bold;
   line-height: 2;
   transition: background-color 0.4s;
@@ -269,9 +269,9 @@ button:hover, button:focus {
   display: none;
   position: absolute;
   font-weight: bold;
-  font-size: 12px;
-  top: -10px;
-  left: 32px;
+  font-size: 0.75rem;
+  top: -0.625rem;
+  left: 2rem;
 }
 
 #error {
@@ -284,7 +284,7 @@ button:hover, button:focus {
 
 @media screen and (min-width: 500px) {
   .container {
-    padding: 50px 39px;
+    padding: 3.125rem 2.4375rem;
     text-align: left;
     justify-content: left;
   }
@@ -292,17 +292,17 @@ button:hover, button:focus {
   main {
     max-width: 100%;
     justify-items: left;
-    padding: 93px 0;
-    gap: 30px;
+    padding: 5.8125rem 0;
+    gap: 1.875rem;
   }
 
   h1 {
-    font-size: 48px;
+    font-size: 3rem;
     line-height: 1.167;
   }
 
   p {
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.556;
     max-width: 40ch;
   }
@@ -311,54 +311,50 @@ button:hover, button:focus {
     order: 2;
     justify-content: space-between;
     flex-wrap: nowrap;
-    max-width: 536px;
-    padding: 35px 0;
+    max-width: 33.5rem;
+    padding: 2.1875rem 0;
   }
   
   .platforms img:nth-of-type(1) {
     width: 25%;
-    max-width: 96px;
+    max-width: 6rem;
   }
   .platforms img:nth-of-type(2) {
     width: 25%;
-    max-width: 78px;
+    max-width: 4.875rem;
   }
   .platforms img:nth-of-type(3) {
     width: 25%;
-    max-width: 125px;
+    max-width: 7.8125rem;
   }
   .platforms img:nth-of-type(4) {
     width: 25%;
-    max-width: 129px;
+    max-width: 8.0625rem;
   }
 
   form {
     grid-auto-flow: column;
-    max-width: 427px;
-    padding-top: 11px;
+    max-width: 26.6875rem;
+    padding-top: 0.6875rem;
   }
 
   input {
-    height: 56px;
+    height: 3.5rem;
   }
 
   button {
     position: absolute;
-    right: 5px;
-    top: 16px;
-    width: 162px;
+    right: 0.3125rem;
+    top: 1rem;
+    width: 10.125rem;
   }
 
   #error, #success {
-    top: 78px;
+    top: 4.875rem;
   }
 }
 
 @media screen and (min-width: 600px) {
-  .container {
-    min-height: unset;
-  }
-
   .container::before {
     background-image: url('./assets/tablet/image-host.jpg');
     background-size: unset;
@@ -370,69 +366,69 @@ button:hover, button:focus {
   .container::after {
     content: url('./assets/desktop/bg-pattern-dots.svg');
     position: absolute;
-    bottom: -4px;
-    left: 30px;
+    bottom: -0.25rem;
+    left: 1.875rem;
     animation: fadeLeft 1s ease backwards;
   }
 
   header {
-    margin-bottom: 95px;
+    margin-bottom: 5.9375rem;
     animation: fadeIn 1s ease backwards;
   }
 
   main {
     background-color:#121725;
-    max-width: 635px;
-    padding: 93px 39px 93px 0;
+    max-width: 39.6875rem;
+    padding: 5.8125rem 2.4375rem 5.8125rem 0;
     animation: fadeUp .9s .1s ease backwards;
   }
 }
 
 @media screen and (min-width: 1050px) {
   .container {
-    padding: 102px 165px;
-    max-width: 1500px;
+    padding: 6.375rem 10.3125rem;
+    max-width: 93.75rem;
     margin: 0 auto;
   }
 
   .container::before {
     background-image: url('./assets/desktop/image-host.jpg');
-    background-position-y: 130px;
-    background-position-x: clamp(425px, 100%, 625px);
+    background-position-y: 8.125rem;
+    background-position-x: clamp(26.5625, 100%, 39.0625rem);
   }
 
   .container::after {
     content: url('./assets/desktop/bg-pattern-dots.svg');
-    bottom: 86px;
+    bottom: 5.375rem;
     left: unset;
     right: 0; 
     animation: fadeRight 1s .1s ease backwards;
   }
 
   header {
-    margin-bottom: 46px;
+    margin-bottom: 2.875rem;
   }
 
   main {
-    max-width: 723px;
-    padding: 88px 39px 0 0;
-    gap: 24px;
+    max-width: 45.1875rem;
+    padding: 5.5rem 2.4375rem 0 0;
+    gap: 1.5rem;
   }
 
   h1 {
-    font-size: 52px;
+    font-size: 3.25rem;
     line-height: 1.19;
   }
 
   form {
-    padding-top: 16px;
+    padding-top: 1rem;
   }
 
   button {
-    top: 21px;
+    top: 1.3125rem;
   }
 
   .platforms {
-    padding: 40px 0;
+    padding: 2.5rem 0;
   }
 }
