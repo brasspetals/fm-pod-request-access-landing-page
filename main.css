@@ -355,6 +355,10 @@ button:hover, button:focus {
 }
 
 @media screen and (min-width: 600px) {
+  .container {
+    min-height: unset;
+  }
+
   .container::before {
     background-image: url('./assets/tablet/image-host.jpg');
     background-size: unset;
@@ -394,7 +398,7 @@ button:hover, button:focus {
   .container::before {
     background-image: url('./assets/desktop/image-host.jpg');
     background-position-y: 8.125rem;
-    background-position-x: clamp(26.5625, 100%, 39.0625rem);
+    background-position-x: clamp(26.5625rem, 100%, 39.0625rem);
   }
 
   .container::after {
