@@ -31,17 +31,18 @@
       <p>Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
 
       <div class="podcasts">
-        <img src="./assets/desktop/spotify.svg" alt="">
-        <img src="./assets/desktop/apple-podcast.svg" alt="">
-        <img src="./assets/desktop/google-podcasts.svg" alt="">
-        <img src="./assets/desktop/pocket-casts.svg" alt="">
+        <h2 class="sr-only">Podcasts we distribute to</h2>
+        <img src="./assets/desktop/spotify.svg" alt="Spotify">
+        <img src="./assets/desktop/apple-podcast.svg" alt="Apple Podcast">
+        <img src="./assets/desktop/google-podcasts.svg" alt="Google Podcasts">
+        <img src="./assets/desktop/pocket-casts.svg" alt="Pocket Casts">
       </div>
 
       <form action="#" id="form">
-        <input type="email" placeholder="Email address" aria-label="email address" id="email" name="email" required>
+        <input type="email" placeholder="Email address" aria-label="email address" aria-describedby="error success" id="email" name="email" required>
         <button id="btn" type="submit">Request access</button>
-        <p id="error">Oops! Please check your email.</p>
-        <p id="success">Success! Your request has been submitted.</p>
+        <p id="error" aria-live="polite">Oops! Please check your email.</p>
+        <p id="success" aria-live="polite">Success! Your request has been submitted.</p>
       </form>
     </main>
   </div>
