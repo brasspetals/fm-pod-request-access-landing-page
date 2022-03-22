@@ -400,14 +400,14 @@ button:hover, button:focus {
 @media screen and (min-width: 1050px) {
   .container {
     padding: 6.375rem 10.3125rem;
-    max-width: 93.75rem;
+    max-width: 100.3125rem;
     margin: 0 auto;
   }
 
   .container::before {
     background-image: url('./assets/desktop/image-host.jpg');
     background-position-y: 8.125rem;
-    background-position-x: clamp(26.5625rem, 100%, 39.0625rem);
+    background-position-x: clamp(26.5625rem, 100%, 34.5rem);
   }
 
   .container::after {
@@ -443,5 +443,12 @@ button:hover, button:focus {
 
   .podcasts {
     padding: 2.5rem 0;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .container::after {
+    left: clamp(1rem, 100%, 75.5rem);
+    right: unset;
   }
 }
