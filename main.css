@@ -130,6 +130,7 @@ body {
   color: #C2CBE5;
   font-family: 'Chivo', sans-serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 .container {
